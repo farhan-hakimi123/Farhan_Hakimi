@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farhan Hakimi bin Feisal — Biodata</title>
+
+<style>
+/* =========================================================
+   BIODATA — "Dark Tech / Cool Masculine" layout
+   Single self-contained file: all CSS lives here so styling
+   can never get lost when moving the file around.
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root{
+  --bg-deep:     #0D1117; /* Deep matte black background */
+  --bg-card:     #161B22; /* Cool charcoal for cards */
+  --bg-card-alt: #21262D; /* Slightly lighter gray for active states */
+  --text-main:   #F0F6FC; /* Clean white-gray text */
+  --text-muted:  #8B949E; /* Cool slate gray for secondary labels */
+  --accent-cyan: #00F2FE; /* Neon cyan for main highlight links & actions */
+  --accent-blue: #4FACFE; /* Electric blue gradient companion */
+  --line:        rgba(240,246,252,0.08);
+
+  --display: 'Oswald', sans-serif;
+  --ui:      'Inter', sans-serif;
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+
+body{
+  margin:0;
+  min-height:100vh;
+  background: var(--bg-deep);
+  color: var(--text-main);
+  font-family: var(--ui);
+  -webkit-font-smoothing: antialiased;
+}
+
+a{ color: inherit; text-decoration: none; }
+button{ font: inherit; }
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+}
+
+.page{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 56px 24px 80px;
+}
+
+/* ---------- Hero ---------- */
+.hero{
+  text-align:center;
+  margin-bottom: 44px;
+}
+.hero-title{
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(46px, 8vw, 76px);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 8px;
+}
+.hero-sub{
+  font-size: 16px;
+  color: var(--text-muted);
+  margin:0;
+  font-weight: 500;
+}
+
+/* ---------- Grid: sidebar + main ---------- */
+.layout{
+  display:flex;
+  gap: 28px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.sidebar{ flex: 0 0 320px; }
+.main-col{ flex: 1 1 480px; min-width: 0; }
+@media (max-width: 760px){
+  .sidebar{ flex: 1 1 100%; }
+  .main-col{ flex: 1 1 100%; }
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar{
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 30px 26px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.field-row{
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+.field-row:first-child{ padding-top: 2px; }
+.field-row:last-of-type{ border-bottom: none; }
+
+.field-label{
+  display:block;
+  font-family: var(--ui);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+.field-value{
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--text-main);
+  line-height:1.4;
+}
+
+.social-icons{
+  display:flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+.social-icons a{
+  width: 36px; height:36px;
+  border-radius: 8px;
+  background: var(--bg-card-alt);
+  border: 1px solid var(--line);
+  display:flex; align-items:center; justify-content:center;
+  transition: all 0.2s ease;
+}
+.social-icons a:hover{ 
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+  transform: translateY(-2px); 
+}
+.social-icons a:hover svg{
+  fill: var(--bg-deep);
+}
+.social-icons svg{ width:16px; height:16px; fill: var(--text-main); transition: fill 0.2s ease; }
+
+.credit{
+  margin-top: 24px;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+/* ---------- Main column ---------- */
+.main-col{ display:flex; flex-direction:column; gap: 22px; }
+
+.photo-card{
+  border-radius: 16px;
+  overflow:hidden;
+  aspect-ratio: 16/10;
+  min-height: 260px;
+  background: linear-gradient(145deg, #1f242c, #11151c);
+  border: 1px solid var(--line);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+.photo-card img{ width:100%; height:100%; object-fit:cover; display:block; }
+.photo-placeholder{
+  font-family: var(--ui);
+  font-size: 12px;
+  font-weight:600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-align:center;
+}
+
+.stats{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 22px 28px;
+  margin-top: 14px;
+  background: var(--bg-card);
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+}
+.stats > div{ flex: 0 1 calc(50% - 14px); min-width: 130px; }
+.stat-label{
+  font-family: var(--ui);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+.stat-value{
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(34px, 5vw, 44px);
+  color: var(--text-main);
+  line-height: 1;
+}
+
+.cta{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+  color: var(--bg-deep);
+  font-family: var(--ui);
+  font-weight: 700;
+  font-size: 13.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 18px 24px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,242,254,0.2);
+  transition: all 0.2s ease;
+}
+.cta:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 35px rgba(0,242,254,0.35);
+  filter: brightness(1.1);
+}
+.cta:focus-visible{
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+}
+
+.hint{
+  text-align:center;
+  font-size: 11px;
+  font-weight:600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: -6px;
+}
+
+/* ---------- Quick-jump nav ---------- */
+.quicknav{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  gap: 12px;
+  margin: 28px 0 0;
+}
+.quicknav a{
+  display:flex;
+  align-items:center;
+  gap: 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text-main);
+  transition: all 0.2s ease;
+}
+.quicknav a .dot{
+  width: 7px; height:7px;
+  border-radius: 50%;
+  background: var(--accent-dot, var(--accent-cyan));
+  flex: 0 0 auto;
+}
+.quicknav a:hover{
+  background: var(--bg-card-alt);
+  border-color: var(--accent-dot, var(--accent-cyan));
+  transform: translateY(-2px);
+}
+.quicknav a:focus-visible{
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+}
+
+/* ---------- Personality radar chart (between CTA and banner sections) ---------- */
+.personality-card{
+  margin-top: 64px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 36px 32px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+.personality-card .personality-heading{
+  text-align: center;
+  margin: 0 0 4px;
+}
+.personality-title{
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(22px, 3vw, 28px);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-main);
+  margin: 0 0 6px;
+}
+.personality-sub{
+  font-size: 13.5px;
+  color: var(--text-muted);
+  margin: 0 0 8px;
+}
+.personality-chart-wrap{
+  display: flex;
+  justify-content: center;
+}
+.personality-chart-wrap svg{
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+}
+.radar-ring{
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 1;
+}
+.radar-axis{
+  stroke: var(--line);
+  stroke-width: 1;
+}
+.radar-data{
+  fill: rgba(0, 242, 254, 0.18);
+  stroke: var(--accent-cyan);
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+}
+.radar-point{
+  fill: var(--bg-deep);
+  stroke: var(--accent-cyan);
+  stroke-width: 2;
+}
+.radar-label{
+  font-family: var(--ui);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  fill: var(--text-main);
+}
+.radar-value{
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 700;
+  fill: var(--accent-cyan);
+}
+@media (max-width: 760px){
+  .personality-card{ padding: 28px 18px; margin-top: 48px; }
+}
+
+/* ---------- Banner sections (University / Address / Contact / Social) ---------- */
+.banners{
+  display:flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 64px;
+}
+
+.banner{
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 40px;
+  background: var(--bg-card);
+  display:flex;
+  align-items:center;
+  gap: 48px;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  scroll-margin-top: 28px; /* keeps the section clear of the viewport edge when jumped to */
+}
+.banner::before{
+  content:"";
+  position:absolute;
+  top:0; left:0;
+  width: 100%; height: 4px;
+  background: var(--accent);
+}
+@media (max-width: 760px){
+  .banner{ padding: 28px; gap: 32px; }
+}
+
+.banner.reverse{ flex-direction: row-reverse; }
+@media (max-width: 760px){
+  .banner.reverse{ flex-direction: column; }
+  .banner{ flex-direction: column; }
+}
+
+.banner-text{
+  flex: 1 1 340px;
+  min-width: 260px;
+}
+.banner-title{
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(28px, 3.6vw, 36px);
+  text-transform: uppercase;
+  color: var(--text-main);
+  line-height: 1.05;
+  margin: 0 0 14px;
+  letter-spacing: 0.03em;
+}
+.banner-desc{
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0 0 24px;
+  max-width: 460px;
+}
+.banner-desc strong{ color: var(--text-main); font-weight: 600; }
+
+.banner-btn{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  background: var(--bg-card-alt);
+  color: var(--text-main);
+  border: 1px solid var(--line);
+  font-family: var(--ui);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.banner-btn:hover{ 
+  background: var(--accent); 
+  color: var(--bg-deep);
+  border-color: transparent;
+  transform: translateY(-1px); 
+}
+.banner-btn:focus-visible{ outline: 2px solid var(--text-main); outline-offset: 3px; }
+
+.banner-detail{
+  display:none;
+  margin-top: 20px;
+  padding: 20px;
+  background: var(--bg-card-alt);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--text-main);
+}
+.banner-detail[data-open="true"]{ display:block; }
+.banner-detail dl{ margin:0; display:flex; flex-direction:column; gap:12px; }
+.banner-detail .d-row{ display:flex; gap:10px; flex-wrap:wrap; border-bottom: 1px solid rgba(255,255,255,0.04); padding-bottom: 10px; }
+.banner-detail .d-row:last-of-type{ border-bottom: none; padding-bottom: 0; }
+.banner-detail dt{ flex: 0 0 160px; font-weight:700; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color: var(--text-muted); }
+.banner-detail .d-row.stacked{ flex-direction: column; gap: 6px; }
+.banner-detail .d-row.stacked dt{ flex: 0 0 auto; }
+.banner-detail dd{ margin:0; flex: 1 1 auto; font-weight:500; }
+.banner-detail a{ color: var(--text-main); border-bottom: 1px solid var(--text-muted); }
+.banner-detail a:hover{ color: var(--accent-cyan); border-color: var(--accent-cyan); }
+
+/* School / university name buttons: underline only appears on hover, opens info popup */
+.school-link{
+  display: inline;
+  background: none;
+  border: none;
+  border-bottom: 1px solid transparent;
+  padding: 0;
+  margin: 0;
+  color: var(--text-main);
+  font: inherit;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.school-link:hover,
+.school-link:focus-visible{
+  color: var(--accent-cyan);
+  border-bottom-color: var(--accent-cyan);
+}
+.school-link:focus-visible{ outline: 2px solid var(--accent-cyan); outline-offset: 2px; }
+
+.contact-social-list{ display:flex; flex-direction:column; gap:8px; max-width: 420px; }
+.contact-social-item{
+  display:flex; align-items:center; gap: 12px;
+  background: var(--bg-card-alt); border: 1px solid var(--line); border-radius: 8px; padding: 9px 14px;
+  transition: all 0.2s ease;
+}
+.contact-social-item:hover{ transform: translateX(4px); border-color: var(--text-muted); }
+.contact-social-item .platform-icon{
+  flex: 0 0 auto;
+  width: 28px; height: 28px;
+  border-radius: 7px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  display:flex; align-items:center; justify-content:center;
+}
+.contact-social-item .platform-icon svg{ width:14px; height:14px; fill: var(--text-main); }
+.contact-social-item .platform{ font-weight:600; font-size:12.5px; letter-spacing:0.02em; flex: 1 1 auto; }
+.contact-social-item .go{ font-size:11px; font-weight:700; color: var(--text-muted); flex: 0 0 auto; }
+.contact-social-item:hover .go{ color: var(--text-main); }
+
+.banner-visual{
+  flex: 1 1 320px;
+  min-width: 240px;
+  position: relative;
+  aspect-ratio: 6/5;
+  min-height: 220px;
+}
+.banner-visual .block{
+  position: absolute;
+  inset: 14% -8% -8% 14%;
+  background: var(--accent);
+  opacity: 0.15;
+  border-radius: 12px;
+  z-index: 0;
+}
+.banner.reverse .banner-visual .block{
+  inset: 14% 14% -8% -8%;
+}
+.banner-visual .photo{
+  position: absolute;
+  inset: 0 14% 14% 0;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  z-index: 1;
+  background: linear-gradient(160deg, #1A202C, #11151D);
+  display:flex; align-items:center; justify-content:center;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+.banner.reverse .banner-visual .photo{
+  inset: 0 0 14% 14%;
+}
+.banner-visual .photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+.banner-visual .photo-tag{
+  font-family: var(--ui);
+  font-size: 11px;
+  font-weight:600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-align:center;
+  padding: 0 16px;
+}
+
+/* ---------- Studies carousel (multi-photo, autoplay + manual) ---------- */
+.banner-visual .carousel{
+  position: absolute;
+  inset: 0 14% 14% 0;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  z-index: 1;
+  background: linear-gradient(160deg, #1A202C, #11151D);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+.banner.reverse .banner-visual .carousel{
+  inset: 0 0 14% 14%;
+}
+.carousel-track{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.carousel-track .slide{
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+  display:flex; align-items:center; justify-content:center;
+}
+.carousel-track .slide.active{ opacity: 1; pointer-events: auto; }
+.carousel-track .slide img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+.slide-map-link{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.slide-map-link::after{
+  content: attr(data-label);
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 8px 12px;
+  font-family: var(--ui);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-main);
+  background: linear-gradient(to top, rgba(13,17,23,0.85), rgba(13,17,23,0));
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+.slide-map-link:hover::after,
+.slide-map-link:focus-visible::after{
+  opacity: 1;
+  transform: translateY(0);
+}
+.slide-map-link:focus-visible{ outline: 2px solid var(--accent-cyan); outline-offset: 2px; }
+
+.carousel-arrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: rgba(13,17,23,0.6);
+  color: var(--text-main);
+  display:flex; align-items:center; justify-content:center;
+  cursor: pointer;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 0.2s ease, background 0.2s ease;
+}
+.carousel:hover .carousel-arrow{ opacity: 1; }
+.carousel-arrow:hover{ background: var(--accent); color: var(--bg-deep); }
+.carousel-arrow:focus-visible{ outline: 2px solid var(--accent-cyan); outline-offset: 2px; opacity: 1; }
+.carousel-arrow.prev{ left: 8px; }
+.carousel-arrow.next{ right: 8px; }
+.carousel-arrow svg{ width: 14px; height: 14px; }
+
+.carousel-dots{
+  position: absolute;
+  bottom: 10px;
+  left: 0; right: 0;
+  display:flex;
+  justify-content:center;
+  gap: 6px;
+  z-index: 5;
+}
+.carousel-dots .dot{
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: rgba(240,246,252,0.3);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.carousel-dots .dot:hover{ background: rgba(240,246,252,0.55); }
+.carousel-dots .dot.active{ background: var(--accent); transform: scale(1.25); }
+.carousel-dots .dot:focus-visible{ outline: 2px solid var(--accent-cyan); outline-offset: 2px; }
+
+/* ---------- School info modal ---------- */
+.modal-overlay{
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(5,7,10,0.72);
+  backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 100;
+}
+.modal-overlay[data-open="true"]{ display: flex; }
+
+.modal-card{
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 36px 32px 32px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  animation: modal-pop 0.18s ease;
+}
+@keyframes modal-pop{
+  from{ opacity: 0; transform: translateY(8px) scale(0.98); }
+  to{ opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.modal-close{
+  position: absolute;
+  top: 16px; right: 16px;
+  width: 32px; height: 32px;
+  border-radius: 8px;
+  background: var(--bg-card-alt);
+  border: 1px solid var(--line);
+  color: var(--text-main);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.modal-close:hover{ background: var(--accent-cyan); color: var(--bg-deep); }
+.modal-close:focus-visible{ outline: 2px solid var(--accent-cyan); outline-offset: 2px; }
+.modal-close svg{ width: 16px; height: 16px; }
+
+.modal-eyebrow{
+  display: block;
+  font-family: var(--ui);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+.modal-title{
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0.01em;
+  color: var(--text-main);
+  margin: 0 0 14px;
+  line-height: 1.2;
+}
+.modal-body{
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ---------- Floating back-to-top button ---------- */
+.back-to-top{
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+  color: var(--bg-deep);
+  box-shadow: 0 12px 28px rgba(0,242,254,0.25);
+  opacity: 0;
+  transform: translateY(12px) scale(0.92);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease, box-shadow 0.2s ease;
+  z-index: 50;
+}
+.back-to-top.visible{
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+.back-to-top:hover{
+  box-shadow: 0 16px 34px rgba(0,242,254,0.4);
+  transform: translateY(-2px) scale(1.03);
+}
+.back-to-top:focus-visible{ outline: 2px solid var(--accent-cyan); outline-offset: 3px; }
+.back-to-top svg{ width: 20px; height: 20px; }
+@media (max-width: 760px){
+  .back-to-top{ right: 16px; bottom: 16px; width: 44px; height: 44px; }
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    width:100%;
+    margin-top:30px;
+}
+
+.gallery-item{
+    background:var(--bg-card-alt);
+    border:1px solid var(--line);
+    border-radius:12px;
+    overflow:hidden;
+    aspect-ratio:16/10;
+}
+
+.gallery-item img,
+.gallery-item video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+#gallery-section{
+    scroll-margin-top:30px;
+}
+
+/* Image Lightbox */
+
+.image-modal{
+    display:none;
+    position:fixed;
+    z-index:99999;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.9);
+    justify-content:center;
+    align-items:center;
+}
+
+.image-modal img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:12px;
+    animation:zoomIn .3s;
+}
+
+.close-image{
+    position:absolute;
+    top:20px;
+    right:35px;
+    color:white;
+    font-size:45px;
+    cursor:pointer;
+}
+
+.gallery-img{
+    cursor:pointer;
+    transition:.3s;
+}
+
+.gallery-img:hover{
+    transform:scale(1.05);
+}
+
+@keyframes zoomIn{
+
+    from{
+        transform:scale(.8);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+.music-btn{
+    position:fixed;
+    bottom:90px;
+    right:20px;
+    background:#00f2fe;
+    color:#111;
+    border:none;
+    padding:12px 18px;
+    border-radius:50px;
+    font-weight:bold;
+    cursor:pointer;
+    z-index:9999;
+    transition:.3s;
+}
+
+.music-btn:hover{
+    transform:scale(1.05);
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="hero" id="top">
+    <h1 class="hero-title">Farhan Hakimi</h1>
+    <p class="hero-sub">I'm a diploma student finding my path, one semester at a time</p>
+  </div>
+
+  <div class="layout">
+
+    <!-- ===================== SIDEBAR ===================== -->
+    <aside class="sidebar">
+
+      <div class="field-row">
+        <span class="field-label">Name</span>
+        <span class="field-value">Farhan Hakimi bin Feisal</span>
+      </div>
+
+      <div class="field-row">
+        <span class="field-label">Age</span>
+        <span class="field-value">24</span>
+      </div>
+
+      <div class="field-row">
+        <span class="field-label">Studies</span>
+        <span class="field-value">UiTM, Diploma in Information Science</span>
+      </div>
+
+      <div class="field-row">
+        <span class="field-label">Location</span>
+        <span class="field-value">Shah Alam, Selangor</span>
+      </div>
+
+      <div class="field-row">
+        <span class="field-label">Social</span>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/kim_mieeee02/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2c2.7 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.46.66.26 1.21.6 1.76 1.15.5.5.84 1.02 1.13 1.7.24.6.41 1.33.46 2.43C21.99 8.94 22 9.3 22 12s-.01 3.06-.06 4.12c-.05 1.1-.22 1.83-.46 2.43-.26.66-.6 1.21-1.15 1.76-.5.5-1.02.84-1.7 1.13-.6.24-1.33.41-2.43.46C15.06 21.99 14.7 22 12 22s-3.06-.01-4.12-.06c-1.1-.05-1.83-.22-2.43-.46-.66-.26-1.21-.6-1.76-1.15-.5-.5-.84-1.02-1.13-1.7-.24-.6-.41-1.33-.46-2.43C2.01 15.06 2 14.7 2 12s.01-3.06.06-4.12c.05-1.1.22-1.83.46-2.43.26-.66.6-1.21 1.15-1.76.5-.5 1.02-.84 1.7-1.13.6-.24 1.33-.41 2.43-.46C8.94 2.01 9.3 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm0 8.2a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4zM17.5 6.3a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/farhan.hakimi.7121" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.83c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.91h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <p class="credit">Biodata Assignment · 2026</p>
+    </aside>
+
+    <!-- ===================== MAIN COLUMN ===================== -->
+    <div class="main-col">
+
+      <div class="photo-card">
+        <!--
+          TO ADD YOUR OWN PHOTO:
+          1. Put your image file in an "assets" folder next to this HTML file.
+          2. Replace the line below with:
+             
+        -->
+        <img src="images/WhatsApp Image 2026-06-26 at 12.00.59 PM.jpeg" alt="Photo of Farhan Hakimi bin Feisal">
+      </div>
+
+      <!-- ===================== QUICK-JUMP NAV ===================== -->
+      <nav class="quicknav" aria-label="Jump to section">
+        <a href="#ban-studies-section" style="--accent-dot:#4FACFE;"><span class="dot"></span>Studies</a>
+        <a href="#ban-hobbies-section" style="--accent-dot:#00F2FE;"><span class="dot"></span>Hobbies</a>
+        <a href="#ban-contact-section" style="--accent-dot:#38EF7D;"><span class="dot"></span>Contact &amp; Social</a>
+        <a href="#ban-work-section" style="--accent-dot:#B5179E;"><span class="dot"></span>Working Experience</a>
+        <a href="#gallery-section" style="--accent-dot:#FFD166;"><span class="dot"></span>Gallery</a>
+      </nav>
+
+      <a class="cta" href="https://wa.me/60182259947" target="_blank" rel="noopener">
+     Contact Me ↗
+      </a>
+      <p class="hint">Scroll down to explore each section</p>
+
+    </div>
+
+  </div>
+
+  <!-- ===================== PERSONALITY RADAR CHART ===================== -->
+  <div class="personality-card">
+    <div class="personality-heading">
+      <h2 class="personality-title">My Personality</h2>
+    </div>
+    <div class="personality-chart-wrap">
+      <svg viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg">
+        <!-- grid rings (20/40/60/80/100) -->
+        <polygon points="300.0,217.0 328.6,233.5 328.6,266.5 300.0,283.0 271.4,266.5 271.4,233.5" class="radar-ring" />
+        <polygon points="300.0,184.0 357.2,217.0 357.2,283.0 300.0,316.0 242.8,283.0 242.8,217.0" class="radar-ring" />
+        <polygon points="300.0,151.0 385.7,200.5 385.7,299.5 300.0,349.0 214.3,299.5 214.3,200.5" class="radar-ring" />
+        <polygon points="300.0,118.0 414.3,184.0 414.3,316.0 300.0,382.0 185.7,316.0 185.7,184.0" class="radar-ring" />
+        <polygon points="300.0,85.0 442.9,167.5 442.9,332.5 300.0,415.0 157.1,332.5 157.1,167.5" class="radar-ring" />
+
+        <!-- axis lines -->
+        <line x1="300" y1="250" x2="300.0" y2="85.0" class="radar-axis" />
+        <line x1="300" y1="250" x2="442.9" y2="167.5" class="radar-axis" />
+        <line x1="300" y1="250" x2="442.9" y2="332.5" class="radar-axis" />
+        <line x1="300" y1="250" x2="300.0" y2="415.0" class="radar-axis" />
+        <line x1="300" y1="250" x2="157.1" y2="332.5" class="radar-axis" />
+        <line x1="300" y1="250" x2="157.1" y2="167.5" class="radar-axis" />
+
+        <!-- data shape -->
+        <polygon points="300.0,177.4 391.5,197.2 360.0,284.6 300.0,314.4 247.1,280.5 157.1,167.5" class="radar-data" />
+
+        <!-- data points -->
+        <circle cx="300.0" cy="177.4" r="4.5" class="radar-point" />
+        <circle cx="391.5" cy="197.2" r="4.5" class="radar-point" />
+        <circle cx="360.0" cy="284.6" r="4.5" class="radar-point" />
+        <circle cx="300.0" cy="314.4" r="4.5" class="radar-point" />
+        <circle cx="247.1" cy="280.5" r="4.5" class="radar-point" />
+        <circle cx="157.1" cy="167.5" r="4.5" class="radar-point" />
+
+        <!-- labels -->
+        <text x="300.0" y="51.0" text-anchor="middle" class="radar-label">Friendly</text>
+        <text x="300.0" y="66.0" text-anchor="middle" class="radar-value">44</text>
+
+        <text x="472.3" y="150.5" text-anchor="start" class="radar-label">Caring</text>
+        <text x="472.3" y="165.5" text-anchor="start" class="radar-value">64</text>
+
+        <text x="472.3" y="349.5" text-anchor="start" class="radar-label">Loyal</text>
+        <text x="472.3" y="364.5" text-anchor="start" class="radar-value">42</text>
+
+        <text x="300.0" y="449.0" text-anchor="middle" class="radar-label">Introvert</text>
+        <text x="300.0" y="464.0" text-anchor="middle" class="radar-value">39</text>
+
+        <text x="127.7" y="349.5" text-anchor="end" class="radar-label">Nonchalant</text>
+        <text x="127.7" y="364.5" text-anchor="end" class="radar-value">37</text>
+
+        <text x="127.7" y="150.5" text-anchor="end" class="radar-label">PBSM</text>
+        <text x="127.7" y="165.5" text-anchor="end" class="radar-value">100</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ===================== BANNER SECTIONS ===================== -->
+  <div class="banners">
+
+    <!-- Studies -->
+    <section class="banner" id="ban-studies-section" style="--accent:#4FACFE;">
+      <div class="banner-text">
+        <h2 class="banner-title">Studies</h2>
+        <p class="banner-desc">
+          <strong>From primary school to diploma.</strong> A quick look at every
+          stage of school so far, all the way to where I'm studying now.
+        </p>
+        <button class="banner-btn" onclick="toggleBanner('ban-studies')">Learn More</button>
+        <div class="banner-detail" id="ban-studies" data-open="false">
+          <dl>
+            <div class="d-row"><dt>Sekolah Rendah</dt><dd><button type="button" class="school-link" onclick="openSchoolModal('primary')">SK Taman Tun Dr Ismail Jaya</button></dd></div>
+            <div class="d-row"><dt>Sekolah Menengah</dt><dd><button type="button" class="school-link" onclick="openSchoolModal('secondary')">SMK Taman Tun Dr Ismail Jaya</button></dd></div>
+            <div class="d-row"><dt>Diploma</dt><dd><button type="button" class="school-link" onclick="openSchoolModal('diploma')">Universiti Teknologi MARA (UiTM), Kampus Cawangan Rembau — Information Science</button></dd></div>
+          </dl>
+        </div>
+      </div>
+      <div class="banner-visual">
+
+        <!-- Studies carousel: add photos in the `studiesSlides` array near the bottom script -->
+        <div class="carousel" id="studiesCarousel">
+          <div class="carousel-track" id="studiesCarouselTrack"></div>
+
+          <button class="carousel-arrow prev" id="studiesPrevBtn" aria-label="Previous photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <button class="carousel-arrow next" id="studiesNextBtn" aria-label="Next photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+
+          <div class="carousel-dots" id="studiesCarouselDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hobbies -->
+    <section class="banner reverse" id="ban-hobbies-section" style="--accent:#00F2FE;">
+      <div class="banner-text">
+        <h2 class="banner-title">Hobbies</h2>
+        <p class="banner-desc">
+          <strong>How I spend my free time.</strong> A mix of screen time and
+          going out, whatever fits the mood that day.
+        </p>
+        <button class="banner-btn" onclick="toggleBanner('ban-hobbies')">Learn More</button>
+        <div class="banner-detail" id="ban-hobbies" data-open="false">
+          <dl>
+            <div class="d-row"><dt>Gaming</dt><dd><button type="button" class="school-link" onclick="openSchoolModal('hobby-gaming')">Always have a game on the go</button></dd></div>
+            <div class="d-row"><dt>Cafe Hunting</dt><dd><button type="button" class="school-link" onclick="openSchoolModal('hobby-cafe')">Exploring new cafes around town</button></dd></div>
+            <div class="d-row"><dt>Movies</dt><dd><button type="button" class="school-link" onclick="openSchoolModal('hobby-movies')">Catching up on films whenever I can</button></dd></div>
+            <div class="d-row"><dt>Anime</dt><dd><button type="button" class="school-link" onclick="openSchoolModal('hobby-anime')">Always tracking a new season</button></dd></div>
+            <div class="d-row"><dt>Manhwa</dt><dd><button type="button" class="school-link" onclick="openSchoolModal('hobby-manhwa')">Reading between episodes</button></dd></div>
+          </dl>
+        </div>
+      </div>
+      <div class="banner-visual">
+        <div class="carousel" id="hobbiesCarousel">
+          <div class="carousel-track" id="hobbiesCarouselTrack"></div>
+
+          <button class="carousel-arrow prev" id="hobbiesPrevBtn" aria-label="Previous photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <button class="carousel-arrow next" id="hobbiesNextBtn" aria-label="Next photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+
+          <div class="carousel-dots" id="hobbiesCarouselDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Social -->
+    <section class="banner" id="ban-contact-section" style="--accent:#38EF7D;">
+      <div class="banner-text">
+        <h2 class="banner-title">Contact &amp; Social</h2>
+        <p class="banner-desc">
+          <strong>Every way to reach me</strong>, in one place. Tap an icon to
+          message, or visit a profile directly.
+        </p>
+        <div class="contact-social-list">
+          <a class="contact-social-item" href="https://wa.me/60182259947" target="_blank" rel="noopener">
+            <span class="platform-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.4 1.26 4.83L2 22l5.36-1.31a9.9 9.9 0 004.68 1.19h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2zm5.84 14.12c-.25.7-1.46 1.34-2 1.42-.51.08-1.15.11-1.86-.12-.43-.13-.98-.31-1.69-.6-2.97-1.28-4.91-4.26-5.06-4.46-.15-.2-1.21-1.61-1.21-3.07 0-1.46.77-2.18 1.04-2.48.27-.3.59-.37.79-.37.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.84 2.07.92 2.22.08.15.13.33.03.53-.1.2-.15.32-.3.49-.15.17-.32.38-.46.51-.15.14-.31.29-.13.6.18.31.81 1.34 1.74 2.17 1.2 1.07 2.21 1.4 2.53 1.55.32.15.51.13.7-.07.2-.2.78-.91.99-1.22.2-.31.41-.26.69-.16.28.1 1.76.83 2.06.98.3.15.5.23.57.36.07.13.07.75-.18 1.46z"/></svg>
+            </span>
+            <span class="platform">WhatsApp · Message me</span>
+            <span class="go">Chat →</span>
+          </a>
+          <a class="contact-social-item" href="https://www.instagram.com/kim_mieeee02/" target="_blank" rel="noopener">
+            <span class="platform-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2c2.7 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.46.66.26 1.21.6 1.76 1.15.5.5.84 1.02 1.13 1.7.24.6.41 1.33.46 2.43C21.99 8.94 22 9.3 22 12s-.01 3.06-.06 4.12c-.05 1.1-.22 1.83-.46 2.43-.26.66-.6 1.21-1.15 1.76-.5.5-1.02.84-1.7 1.13-.6.24-1.33.41-2.43.46C15.06 21.99 14.7 22 12 22s-3.06-.01-4.12-.06c-1.1-.05-1.83-.22-2.43-.46-.66-.26-1.21-.6-1.76-1.15-.5-.5-.84-1.02-1.13-1.7-.24-.6-.41-1.33-.46-2.43C2.01 15.06 2 14.7 2 12s.01-3.06.06-4.12c.05-1.1.22-1.83.46-2.43.26-.66.6-1.21 1.15-1.76.5-.5 1.02-.84 1.7-1.13.6-.24 1.33-.41 2.43-.46C8.94 2.01 9.3 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm0 8.2a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4zM17.5 6.3a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z"/></svg>
+            </span>
+            <span class="platform">Instagram · @kim_mieeee02</span>
+            <span class="go">Visit →</span>
+          </a>
+          <a class="contact-social-item" href="https://www.facebook.com/farhan.hakimi.7121" target="_blank" rel="noopener">
+            <span class="platform-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.83c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.91h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg>
+            </span>
+            <span class="platform">Facebook · farhan.hakimi.7121</span>
+            <span class="go">Visit →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Working Experience -->
+    <section class="banner reverse" id="ban-work-section" style="--accent:#B5179E;">
+      <div class="banner-text">
+        <h2 class="banner-title">Working Experience</h2>
+        <p class="banner-desc">
+          <strong>Hands-on experience</strong> from retail to a campus internship,
+          a small taste of working life so far.
+        </p>
+        <button class="banner-btn" onclick="toggleBanner('ban-work')">Learn More</button>
+        <div class="banner-detail" id="ban-work" data-open="false">
+          <dl class="stacked">
+            <div class="d-row stacked"><dt>Watson's, Taman TTDI Jaya</dt><dd><button type="button" class="school-link" onclick="openSchoolModal('work-watsons')">Retail staff — 6 months</button></dd></div>
+            <div class="d-row stacked"><dt>UiTM Kampus Cawangan Rembau</dt><dd><button type="button" class="school-link" onclick="openSchoolModal('work-uitm')">Internship, Unit Hal Ehwal Islam — 2 months</button></dd></div>
+          </dl>
+        </div>
+      </div>
+      <div class="banner-visual">
+        <div class="carousel" id="workCarousel">
+          <div class="carousel-track" id="workCarouselTrack"></div>
+
+          <button class="carousel-arrow prev" id="workPrevBtn" aria-label="Previous photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <button class="carousel-arrow next" id="workNextBtn" aria-label="Next photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+
+          <div class="carousel-dots" id="workCarouselDots"></div>
+        </div>
+      </div>
+    </section>
+
+  <!-- =================== Gallery Section =================== -->
+   <section class="banner" id="gallery-section" style="--accent:#FFD166;">
+    <div class="banner-text">
+        <h2 class="banner-title">Gallery</h2>
+        <p class="banner-desc">
+            A collection of my favourite photos and videos.
+        </p>
+    </div>
+
+    <div class="gallery-grid">
+
+        <!-- Pictures -->
+        <div class="gallery-item">
+            <img src="images/gambar1.jpeg" alt="Gallery Photo 1" class="gallery-img"
+         onclick="openImage(this.src)">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/gambar2.jpeg" alt="Gallery Photo 2" class="gallery-img"
+         onclick="openImage(this.src)">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/gambar3.jpeg" alt="Gallery Photo 3" class="gallery-img"
+         onclick="openImage(this.src)">
+        </div>
+
+        <!-- Videos -->
+        <div class="gallery-item">
+            <video controls>
+                <source src="videos/WhatsApp Video 2026-06-27 at 11.43.44 AM.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="gallery-item">
+            <video controls>
+                <source src="videos/WhatsApp Video 2026-06-27 at 11.44.01 AM.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="gallery-item">
+            <video controls>
+                <source src="videos/WhatsApp Video 2026-06-27 at 11.44.03 AM.mp4" type="video/mp4">
+            </video>
+        </div>
+
+    </div>
+</section>
+
+  </div>
+  <!-- =================== END BANNER SECTIONS =================== -->
+
+  <!-- ===================== SCHOOL INFO MODAL ===================== -->
+  <div class="modal-overlay" id="schoolModalOverlay" data-open="false">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="schoolModalTitle">
+      <button type="button" class="modal-close" id="schoolModalClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <span class="modal-eyebrow" id="schoolModalEyebrow">School</span>
+      <h3 class="modal-title" id="schoolModalTitle">School Name</h3>
+      <p class="modal-body" id="schoolModalBody">Details coming soon.</p>
+    </div>
+  </div>
+
+  <!-- ===================== BACK TO TOP (floating) ===================== -->
+  <a href="#top" class="back-to-top" id="backToTopBtn" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+  </a>
+
+</div>
+
+<script>
+  function toggleBanner(id){
+    var el = document.getElementById(id);
+    var isOpen = el.getAttribute('data-open') === 'true';
+    el.setAttribute('data-open', isOpen ? 'false' : 'true');
+  }
+
+  /* =========================================================
+     SCHOOL INFO MODAL
+     Placeholder copy for now — swap in real details per school.
+     ========================================================= */
+  const schoolInfo = {
+    primary: {
+      eyebrow: "Sekolah Rendah",
+      title: "SK Taman Tun Dr Ismail Jaya",
+      body: "A time when friendships and joy were pure, honest, and completely free of pretense."
+    },
+    secondary: {
+      eyebrow: "Sekolah Menengah",
+      title: "SMK Taman Tun Dr Ismail Jaya",
+      body: "That distinct ache of wanting to grow up so badly, while secretly wishing time would slow down."
+    },
+    diploma: {
+      eyebrow: "Diploma",
+      title: "UiTM, Kampus Cawangan Rembau — Information Science",
+      body: "Taking a massive, chaotic mountain of unorganized information and turning it into something clean, useful, and elegant."
+    },
+    "hobby-gaming": {
+      eyebrow: "Hobby",
+      title: "Gaming",
+      body: "Gaming is how I connect. Some of my favorite memories aren't just achieving an in-game goal, but the laughs shared with friends over headsets late into the night. It bridges distances, brings people together from all walks of life, and has given me a community where I truly feel like I belong."
+    },
+    "hobby-cafe": {
+      eyebrow: "Hobby",
+      title: "Cafe Hunting",
+      body: "There is a unique comfort in being alone in a room full of strangers. Cafe hunting is my favorite way to disconnect from my routine and reconnect with myself."
+    },
+    "hobby-movies": {
+      eyebrow: "Hobby",
+      title: "Movies",
+      body: "What I love most about movies is how they force you to walk in someone else's shoes. For two hours, you completely forget your own life, your own stress, and your own perspective. You are totally at the mercy of someone else's story. It's a beautiful, humbling reminder of how connected we all are, despite our different realities."
+    },
+    "hobby-anime": {
+      eyebrow: "Hobby",
+      title: "Anime",
+      body: "I love anime fights that treat combat like a puzzle. Shows like My Hero Academia are brilliant because characters can't just power up and win. They have to map out their opponent's strict conditions, trade-offs, and rules. Watching a character win a battle purely because they outsmarted a broken ability is so much more satisfying than just watching a giant laser beam struggle."
+    },
+    "hobby-manhwa": {
+      eyebrow: "Hobby",
+      title: "Manhwa",
+      body: "Manhwa has absolutely perfected the art of the 'power fantasy' and the 'glow-up.' Whether it's an underdog protagonist awakening a video game system, a betrayed warrior regressing back in time to fix their mistakes, or a bullied student learning to fight, the progression is incredibly addictive. The payoff when a character finally unleashes their true strength against everyone who doubted them is pure, unadulterated satisfaction."
+    },
+    "work-watsons": {
+      eyebrow: "Working Experience",
+      title: "Watson's, Taman TTDI Jaya - Senior Customer Assistant",
+      body: "Stepping into a senior role means a lot more than just wearing the uniform. Today was day one of leading by example on the floor. It was a whirlwind of answering customer questions about skincare, helping junior staff at the registers, and making sure our displays were spotless. It’s challenging, but it feels incredibly rewarding to know the team relies on me to help keep the store running smoothly"
+    },
+    "work-uitm": {
+      eyebrow: "Working Experience",
+      title: "UiTM Kampus Cawangan Rembau — Internship Unit Hal Ehwal Islam",
+      body: "When I told people I was interning at Unit Hal Ehwal Islam UiTM Seremban, a lot of them were confused. But as an Information Science student, I see the unit as a massive living archive. From managing digital databases for student Zakat applications, archiving religious event records, to structuring the information architecture of our campus community outreach—I am applying data organization and records management to a real-world, high-impact environment every single day."
+    }
+  };
+
+  const schoolModalOverlay = document.getElementById('schoolModalOverlay');
+  const schoolModalEyebrow = document.getElementById('schoolModalEyebrow');
+  const schoolModalTitle   = document.getElementById('schoolModalTitle');
+  const schoolModalBody    = document.getElementById('schoolModalBody');
+  const schoolModalClose   = document.getElementById('schoolModalClose');
+
+  let lastFocusedEl = null;
+
+  function openSchoolModal(key){
+    const info = schoolInfo[key];
+    if (!info || !schoolModalOverlay) return;
+
+    schoolModalEyebrow.textContent = info.eyebrow;
+    schoolModalTitle.textContent = info.title;
+    schoolModalBody.textContent = info.body;
+
+    lastFocusedEl = document.activeElement;
+    schoolModalOverlay.setAttribute('data-open', 'true');
+    schoolModalClose.focus();
+  }
+
+  function closeSchoolModal(){
+    if (!schoolModalOverlay) return;
+    schoolModalOverlay.setAttribute('data-open', 'false');
+    if (lastFocusedEl) lastFocusedEl.focus();
+  }
+
+  if (schoolModalClose){
+    schoolModalClose.addEventListener('click', closeSchoolModal);
+  }
+  if (schoolModalOverlay){
+    schoolModalOverlay.addEventListener('click', (e) => {
+      if (e.target === schoolModalOverlay) closeSchoolModal();
+    });
+  }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && schoolModalOverlay && schoolModalOverlay.getAttribute('data-open') === 'true'){
+      closeSchoolModal();
+    }
+  });
+
+  /* =========================================================
+     SECTION CAROUSELS
+     One reusable carousel engine, fed with each section's own
+     slide list. Add as many photos as you like to each array.
+     Leave src as "" to show the "not yet attached" placeholder.
+     Note: Contact & Social has no photo/visual panel at all — it's
+     just the hyperlinked icon list (phone, WhatsApp, Instagram, Facebook).
+     ========================================================= */
+  const AUTOPLAY_DELAY = 4000; // ms between auto-advances
+
+  const studiesSlides = [
+    { src: "images/skttdijaya.jpg", alt: "Primary school logophoto", mapUrl: "https://www.google.com/maps/search/?api=1&query=SK+Taman+Tun+Dr+Ismail+Jaya" },
+    { src: "images/smkttdijaya.jpg", alt: "Secondary school logo photo", mapUrl: "https://www.google.com/maps/search/?api=1&query=SMK+Taman+Tun+Dr+Ismail+Jaya" },
+    { src: "images/uitmrembau.png", alt: "Diploma logo photo", mapUrl: "https://www.google.com/maps/search/?api=1&query=UiTM+Kampus+Cawangan+Rembau" }
+  ];
+
+  const hobbiesSlides = [
+    { src: "images/gaming.jpg", alt: "Mobile Legends: Bang Bang gaming photo", mapUrl: "https://www.google.com/search?q=Mobile+Legends%3A+Bang+Bang", linkLabel: "Search ↗" },
+    { src: "images/KaffeKop.jpg", alt: "Kaffekop cafe photo", mapUrl: "https://www.google.com/maps/search/?api=1&query=Kaffekop+Shah+Alam+City+Centre", linkLabel: "View on map ↗" },
+    { src: "images/movies.jpg", alt: "Movies photo", mapUrl: "https://www.google.com/maps/search/?api=1&query=GSC+Setia+City+Mall", linkLabel: "View on map ↗" },
+    { src: "images/anime.jpg", alt: "My Hero Academia anime photo", mapUrl: "https://www.crunchyroll.com/search?q=my%20hero%20academia", linkLabel: "Watch on Crunchyroll ↗" },
+    { src: "images/manhwa.jpg", alt: "Lookism manhwa photo", mapUrl: "https://www.google.com/search?q=Lookism+manhwa", linkLabel: "Search ↗" }
+  ];
+
+  const workSlides = [
+    { src: "images/watsonttdijaya.jpg", alt: "Watsons Taman TTDI Jaya photo", mapUrl: "https://www.google.com/maps/search/?api=1&query=Watsons+Taman+TTDI+Jaya", linkLabel: "View on map ↗" },
+    { src: "images/UHEI.jpg", alt: "UiTM internship photo", mapUrl: "https://www.google.com/maps/search/?api=1&query=UiTM+Seremban", linkLabel: "View on map ↗" }
+  ];
+
+  function initCarousel(prefix, slides){
+    const track    = document.getElementById(prefix + 'CarouselTrack');
+    const dotsWrap = document.getElementById(prefix + 'CarouselDots');
+    const prevBtn  = document.getElementById(prefix + 'PrevBtn');
+    const nextBtn  = document.getElementById(prefix + 'NextBtn');
+    const carousel = document.getElementById(prefix + 'Carousel');
+
+    if(!track) return; // safety check in case section is removed later
+
+    let current = 0;
+    let autoplayTimer = null;
+
+    function buildSlides(){
+      track.innerHTML = '';
+      dotsWrap.innerHTML = '';
+
+      slides.forEach((slide, i) => {
+        const slideEl = document.createElement('div');
+        slideEl.className = 'slide' + (i === 0 ? ' active' : '');
+
+        if (slide.src) {
+          const img = document.createElement('img');
+          img.src = slide.src;
+          img.alt = slide.alt || '';
+
+          if (slide.mapUrl) {
+            const link = document.createElement('a');
+            link.href = slide.mapUrl;
+            link.target = '_blank';
+            link.rel = 'noopener';
+            link.className = 'slide-map-link';
+            link.setAttribute('data-label', (slide.linkLabel || 'View on map ↗'));
+            link.setAttribute('aria-label', (slide.alt || 'Photo') + ' — ' + (slide.linkLabel || 'view on map'));
+            link.appendChild(img);
+            slideEl.appendChild(link);
+          } else {
+            slideEl.appendChild(img);
+          }
+        } else {
+          const placeholder = document.createElement('span');
+          placeholder.className = 'photo-tag';
+          placeholder.innerHTML = (slide.alt || 'Photo not yet attached').replace(' ', '<br>');
+          slideEl.appendChild(placeholder);
+        }
+
+        track.appendChild(slideEl);
+
+        const dot = document.createElement('button');
+        dot.className = 'dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Go to photo ' + (i + 1));
+        dot.addEventListener('click', () => goTo(i));
+        dotsWrap.appendChild(dot);
+      });
+    }
+
+    function goTo(index){
+      const allSlides = track.querySelectorAll('.slide');
+      const allDots = dotsWrap.querySelectorAll('.dot');
+
+      allSlides[current].classList.remove('active');
+      allDots[current].classList.remove('active');
+
+      current = (index + slides.length) % slides.length;
+
+      allSlides[current].classList.add('active');
+      allDots[current].classList.add('active');
+
+      restartAutoplay();
+    }
+
+    function next(){ goTo(current + 1); }
+    function prev(){ goTo(current - 1); }
+
+    function startAutoplay(){
+      if (slides.length <= 1) return;
+      autoplayTimer = setInterval(next, AUTOPLAY_DELAY);
+    }
+    function stopAutoplay(){ clearInterval(autoplayTimer); }
+    function restartAutoplay(){ stopAutoplay(); startAutoplay(); }
+
+    nextBtn.addEventListener('click', next);
+    prevBtn.addEventListener('click', prev);
+
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+    carousel.addEventListener('focusin', stopAutoplay);
+    carousel.addEventListener('focusout', startAutoplay);
+
+    buildSlides();
+    startAutoplay();
+  }
+
+  initCarousel('studies', studiesSlides);
+  initCarousel('hobbies', hobbiesSlides);
+  initCarousel('work', workSlides);
+
+  /* =========================================================
+     BACK TO TOP BUTTON
+     Shows once the page has scrolled past the hero.
+     ========================================================= */
+  const backToTopBtn = document.getElementById('backToTopBtn');
+  if (backToTopBtn){
+    const toggleBackToTop = () => {
+      if (window.scrollY > 320){
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    };
+    window.addEventListener('scroll', toggleBackToTop, { passive: true });
+    toggleBackToTop();
+  }
+</script>
+
+<!-- Image Zoom Modal -->
+<div id="imageModal" class="image-modal">
+
+    <span class="close-image" onclick="closeImage()">&times;</span>
+
+    <img id="modalImage">
+
+</div>
+
+<script>
+
+function openImage(src){
+
+    document.getElementById("imageModal").style.display="flex";
+    document.getElementById("modalImage").src=src;
+
+}
+
+function closeImage(){
+
+    document.getElementById("imageModal").style.display="none";
+
+}
+
+// Close when clicking outside the image
+document.getElementById("imageModal").addEventListener("click", function(e){
+
+    if(e.target===this){
+        closeImage();
+    }
+
+});
+
+</script>
+
+<!-- Background Music -->
+<audio id="bgMusic" loop>
+    <source src="music\Clean Bandit - Symphony feat. Zara Larsson.mp3" type="audio/mpeg">
+    
+</audio>
+
+<button id="musicBtn" class="music-btn">
+    ▶ Play Music
+</button>
+
+<script>
+const music = document.getElementById("bgMusic");
+const btn = document.getElementById("musicBtn");
+
+btn.addEventListener("click", () => {
+
+    if(music.paused){
+        music.play();
+        btn.innerHTML = "⏸ Pause Music";
+    }else{
+        music.pause();
+        btn.innerHTML = "▶ Play Music";
+    }
+
+});
+</script>
+
+</body>
+</html>
